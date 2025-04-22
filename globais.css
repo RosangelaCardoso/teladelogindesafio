@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Estilos personalizados para a tela de login */
+
+/* Efeito de foco personalizado para os inputs */
+.login-input:focus {
+  /* Adiciona uma transição suave ao focar o input */
+  transition: all 0.2s ease-in-out;
+  /* Adiciona uma sombra sutil ao focar */
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+}
+
+/* Animação sutil ao carregar a página */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Aplica a animação aos elementos do formulário */
+form {
+  animation: fadeIn 0.5s ease-out;
+}
+
+/* Estilização personalizada para o checkbox */
+input[type="checkbox"] {
+  /* Cursor de ponteiro ao passar o mouse */
+  cursor: pointer;
+  /* Transição suave ao mudar de estado */
+  transition: all 0.2s;
+}
+
+/* Estilização para o botão de submit quando pressionado */
+button[type="submit"]:active {
+  transform: scale(0.98);
+}
+
+/* Media query para ajustes em telas muito pequenas */
+@media (max-width: 360px) {
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  form {
+    margin-top: 1rem;
+  }
+}
